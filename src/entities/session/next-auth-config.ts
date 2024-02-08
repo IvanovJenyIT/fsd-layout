@@ -7,6 +7,11 @@ import { privateConfig } from "@/components/config/private";
 
 export const nextAuthConfig: AuthOptions = {
   adapter: PrismaAdapter(dbClient) as AuthOptions["adapter"],
+  pages: {
+    signIn: "/auth/sign-in",
+    newUser: "/auth/new-user",
+    verifyRequest: "/auth/verify-request",
+  },
   providers: compact([
     privateConfig.GITHUB_ID &&
       privateConfig.GITHUB_SECRET &&

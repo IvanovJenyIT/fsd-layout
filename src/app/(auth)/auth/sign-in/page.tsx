@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-// import { SignInForm } from "@/features/auth/sign-in-form.server";
+import { SignInForm } from "@/features/auth/sign-in-form.server";
 
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ export default function AuthenticationPage() {
             </h1>
           </CardHeader>
           <CardContent className="grid gap-4">
-            {/* <SignInForm /> */}
+            <SignInForm />
             <p className="px-0 text-center text-sm text-muted-foreground">
               Нажимая продолжить вы соглашаетесь с{" "}
               <Link
