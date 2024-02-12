@@ -1,4 +1,4 @@
-import { getAppSessionServer } from "@/entities/session/session.server";
+import { getAppSessionServer } from "@/entities/user/session.server";
 // import { UpdateProfileForm } from "@/features/update-profile/update-profile-form";
 // import { Separator } from "@/shared/ui/separator";
 import { redirect } from "next/navigation";
