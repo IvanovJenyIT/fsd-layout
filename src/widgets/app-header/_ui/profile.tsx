@@ -13,16 +13,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { useAppSession } from "@/entities/session/use-app-session";
 import { useSignOut } from "@/features/auth/use-sign-out";
 import { SignInButton } from "@/features/auth/sign-in-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useAppSession, useRole } from "@/entities/user/session";
 
 // import { ProfileAvatar, getProfileDisplayName } from "@/entities/user/profile";
 
 export function Profile() {
   const session = useAppSession();
   const { signOut, isPending: isLoadingSignOut } = useSignOut();
+
+  console.log(useRole());
 
   if (session.status === "loading") {
     return <Skeleton className="w-8 h-8 rounded-full" />;
